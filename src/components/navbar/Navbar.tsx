@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { LuFilter } from "react-icons/lu";
 import { Checkbox } from "@/components/ui/checkbox";
 import "./index.css"
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -16,13 +17,14 @@ const Navbar: React.FC = () => {
         } transition-all duration-[400ms] ease-in-out`}
       >
         <div className="header-box flex items-center justify-between bg-[#1F1E1E] py-6 px-4">
+         <Link to={"/"}>
           <img
             src="./logoLeft.png"
             alt="logo"
             className={`w-[125px] ${
               isOpen ? "opacity-100" : "opacity-0  hidden"
             }`}
-          />
+          /></Link>
           <RxHamburgerMenu
             size={"18px"}
             color="#F1F2F4"
